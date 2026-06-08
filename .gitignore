@@ -3,3 +3,4 @@
 *.bak
 顔名前暗記アプリ_要件定義書_v1.md
 furigana_check.md
+_romaji_cache.json   # reading再生成スクリプトの取得キャッシュ（一時）
