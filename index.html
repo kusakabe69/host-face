@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>host-face（ホスフェイス）</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+
+    <!-- 1. 店舗選択 -->
+    <section id="screen-store" class="screen active">
+      <header class="app-header">
+        <h1 class="logo">host&#8209;face</h1>
+        <p class="tagline">顔と名前 暗記アプリ</p>
+      </header>
+      <div class="content">
+        <h2 class="screen-title">店舗を選ぶ</h2>
+        <div id="store-list" class="store-list"></div>
+      </div>
+    </section>
+
+    <!-- 2. ホーム -->
+    <section id="screen-home" class="screen">
+      <header class="app-header small">
+        <button class="link-btn" data-go="store">&#8592; 店舗を変える</button>
+        <h1 id="home-store-name" class="store-name"></h1>
+      </header>
+      <div class="content">
+        <div class="summary-card">
+          <div class="big-stat">
+            <span id="home-mastered">0</span><span class="slash">/</span><span id="home-total">0</span>
+          </div>
+          <div class="stat-label">覚えた人数</div>
+          <div class="progress-bar"><div id="home-progress-fill" class="progress-fill"></div></div>
+        </div>
+        <button id="start-btn" class="primary-btn big">クイズを始める</button>
+        <button class="secondary-btn" data-go="mastery">習得状況を見る</button>
+      </div>
+    </section>
+
+    <!-- 3. クイズ -->
+    <section id="screen-quiz" class="screen">
+      <header class="quiz-bar">
+        <button class="link-btn" id="quit-btn">やめる</button>
+        <div class="quiz-stats">
+          <span class="qs streak">🔥連続 <span id="q-streak">0</span></span>
+          <span class="qs ok">○ <span id="q-ok">0</span></span>
+          <span class="qs ng">× <span id="q-ng">0</span></span>
+        </div>
+      </header>
+      <div class="content quiz-content">
+        <div class="photo-wrap">
+          <img id="q-photo" alt="この人の名前は？" />
+          <div id="q-feedback" class="q-feedback"></div>
+        </div>
+        <p class="q-prompt">この人は誰？</p>
+        <div id="q-choices" class="choices"></div>
+      </div>
+    </section>
+
+    <!-- 4. 答え合わせ -->
+    <section id="screen-answer" class="screen">
+      <div class="content answer-content">
+        <div id="answer-banner" class="answer-banner"></div>
+        <div class="photo-wrap big">
+          <img id="a-photo" alt="" />
+        </div>
+        <div class="answer-name-block">
+          <div id="a-furigana" class="furigana"></div>
+          <div id="a-name" class="name"></div>
+          <div id="a-group" class="group-tag"></div>
+        </div>
+        <div id="a-yourpick" class="your-pick"></div>
+        <button id="next-btn" class="primary-btn big">次へ &#8594;</button>
+      </div>
+    </section>
+
+    <!-- 5. 結果 -->
+    <section id="screen-result" class="screen">
+      <div class="content">
+        <h2 class="screen-title">おつかれさま！</h2>
+        <div class="summary-card">
+          <div class="big-stat">
+            <span id="result-score">0</span><span class="slash">/</span><span id="result-total">0</span>
+          </div>
+          <div class="stat-label">今回の正解 / 出題</div>
+          <div class="stat-note">最高連続正解 <span id="result-best">0</span></div>
+        </div>
+        <div id="result-wrong-block">
+          <h3 class="section-heading">間違えた人</h3>
+          <div id="result-wrong-list" class="mini-grid"></div>
+        </div>
+        <button id="again-btn" class="primary-btn big">もう一度はじめる</button>
+        <button class="secondary-btn" data-go="mastery">習得状況を見る</button>
+        <button class="secondary-btn" data-go="home">ホームへ</button>
+        <button class="link-btn center" data-go="store">店舗を変える</button>
+      </div>
+    </section>
+
+    <!-- 6. 習得状況 -->
+    <section id="screen-mastery" class="screen">
+      <header class="app-header small">
+        <button class="link-btn" data-go="home">&#8592; ホーム</button>
+        <h1 id="mastery-store-name" class="store-name"></h1>
+      </header>
+      <div class="content">
+        <div class="summary-card">
+          <div class="big-stat">
+            <span id="mastery-mastered">0</span><span class="slash">/</span><span id="mastery-total">0</span>
+          </div>
+          <div class="stat-label">覚えた割合</div>
+          <div class="stat-note">「覚えた」＝連続2回正解した人</div>
+          <div class="progress-bar"><div id="mastery-progress-fill" class="progress-fill"></div></div>
+        </div>
+
+        <div class="stat-tiles">
+          <div class="stat-tile">
+            <div class="st-num"><span id="ms-seen">0</span><span class="st-den">/<span id="ms-seen-total">0</span></span></div>
+            <div class="st-label">出題した人</div>
+          </div>
+          <div class="stat-tile">
+            <div class="st-num"><span id="ms-correct-people">0</span><span class="st-den">/<span id="ms-seen2">0</span></span></div>
+            <div class="st-label">正解できた人</div>
+          </div>
+          <div class="stat-tile">
+            <div class="st-num"><span id="ms-rate">0</span><span class="st-unit">%</span></div>
+            <div class="st-label">合計正解率</div>
+            <div class="st-sub"><span id="ms-correct">0</span>/<span id="ms-answers">0</span>問</div>
+          </div>
+        </div>
+
+        <div id="mastery-groups"></div>
+
+        <h3 class="section-heading">苦手な人（間違いが多い順）</h3>
+        <div id="mastery-weak-list" class="mini-grid"></div>
+
+        <h3 class="section-heading">全員の成績（出題回数・正解数）</h3>
+        <div class="person-table-head">
+          <span class="pt-name">名前</span>
+          <span class="pt-stat">出題</span>
+          <span class="pt-stat">正解</span>
+          <span class="pt-stat">正解率</span>
+        </div>
+        <div id="mastery-all-list"></div>
+
+        <button class="secondary-btn danger" id="reset-btn">この店舗の進捗をリセット</button>
+      </div>
+    </section>
+
+    <!-- ロード失敗時 -->
+    <section id="screen-error" class="screen">
+      <div class="content">
+        <h2 class="screen-title">データを読み込めません</h2>
+        <p class="error-msg" id="error-detail"></p>
+        <p class="hint">ファイルを直接ダブルクリックで開くと、ブラウザのセキュリティで <code>stores.json</code> を読めないことがあります。下記のローカルサーバー経由で開いてください：</p>
+        <pre class="code-block">cd "host-face のフォルダ"
+python -m http.server 8000</pre>
+        <p class="hint">そのあとブラウザで <code>http://localhost:8000</code> を開く。</p>
+      </div>
+    </section>
+
+  </div>
+  <div class="credit">Created by Kusakabe</div>
+  <script src="app.js"></script>
+</body>
+</html>
