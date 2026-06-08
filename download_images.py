@@ -36,6 +36,8 @@ def fetch_page_images(sid, slug):
         for m in pat.findall(html):
             if m.endswith("-m") or m.endswith("-thum"):
                 continue
+            if m.lower().startswith("img"):   # imgNN.jpg は特殊画像なので除外
+                continue
             found.add(m + ".jpg")
         names = sorted(found, key=sort_key)
     except Exception:

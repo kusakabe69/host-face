@@ -39,10 +39,12 @@ const PLACEHOLDER =
   );
 
 // photos(配列) を返す。無ければ旧 photo(単数) にフォールバック。
+// imgNN.jpg は特殊画像なので表示対象から除外する（保険）。
 function staffPhotos(staff) {
-  if (Array.isArray(staff.photos) && staff.photos.length) return staff.photos;
-  if (staff.photo) return [staff.photo];
-  return [];
+  let list = Array.isArray(staff.photos) && staff.photos.length
+    ? staff.photos
+    : (staff.photo ? [staff.photo] : []);
+  return list.filter((p) => !p.split('/').pop().toLowerCase().startsWith('img'));
 }
 
 function photoUrl(rel) {
