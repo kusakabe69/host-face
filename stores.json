@@ -39,8 +39,7 @@
             "kanata/pic03.jpg"
           ],
           "group": "ランキング",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "kakeru",
@@ -66,8 +65,7 @@
             "yu04/pic03.jpg"
           ],
           "group": "ランキング",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "yu01",
@@ -80,8 +78,7 @@
             "yu01/pic03.jpg"
           ],
           "group": "ランキング",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "kuma",
@@ -120,8 +117,7 @@
             "yoichi/pic03.jpg"
           ],
           "group": "ランキング",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "ran03",
@@ -134,8 +130,7 @@
             "ran03/pic03.jpg"
           ],
           "group": "ランキング",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "hikaru01",
@@ -146,8 +141,7 @@
             "hikaru01/pic01.jpg"
           ],
           "group": "ランキング",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "shinsei",
@@ -282,8 +276,7 @@
             "so/pic01.jpg"
           ],
           "group": "ランキング",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "kento02",
@@ -347,13 +340,12 @@
             "haon/pic02.jpg"
           ],
           "group": "ランキング",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "shu03",
           "name": "月雲 柊",
-          "reading": "つきぐも しゅう",
+          "reading": "つくも しゅう",
           "photos": [
             "shu03/pr01.jpg",
             "shu03/pic01.jpg",
@@ -361,8 +353,7 @@
             "shu03/pic03.jpg"
           ],
           "group": "ランキング",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "yuya",
@@ -388,8 +379,7 @@
             "itsuki01/pic03.jpg"
           ],
           "group": "ランキング",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "yu",
@@ -415,8 +405,7 @@
             "oya/pic03.jpg"
           ],
           "group": "スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "taku",
@@ -434,7 +423,7 @@
         {
           "id": "mizuki",
           "name": "黒城みづき",
-          "reading": "くろき みづき",
+          "reading": "こくじょう みづき",
           "photos": [
             "mizuki/pr01.jpg",
             "mizuki/pic01.jpg",
@@ -442,8 +431,7 @@
             "mizuki/pic03.jpg"
           ],
           "group": "スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "runa",
@@ -482,8 +470,7 @@
             "rin01/pic03.jpg"
           ],
           "group": "スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "aitoharumi",
@@ -496,8 +483,7 @@
             "aitoharumi/pic03.jpg"
           ],
           "group": "スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "hikaru",
@@ -528,27 +514,25 @@
         {
           "id": "yuito",
           "name": "湊月結翔",
-          "reading": "みなづき ゆいと",
+          "reading": "みづき ゆいと",
           "photos": [
             "yuito/pr01.jpg",
             "yuito/pic01.jpg",
             "yuito/pic02.jpg"
           ],
           "group": "スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "akito02",
           "name": "兎あきと",
-          "reading": "うさぎ あきと",
+          "reading": "ばに あきと",
           "photos": [
             "akito02/pr01.jpg",
             "akito02/pic01.jpg"
           ],
           "group": "スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "natsuki01",
@@ -561,8 +545,7 @@
             "natsuki01/pic03.jpg"
           ],
           "group": "スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "gaku",
@@ -648,8 +631,7 @@
             "nagito01/pic02.jpg"
           ],
           "group": "スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "tsueru",
@@ -729,7 +711,7 @@
         {
           "id": "yua",
           "name": "御伽噺 優愛",
-          "reading": "おとぎばなし ゆあ",
+          "reading": "おとぎ ゆあ",
           "photos": [
             "yua/pr01.jpg",
             "yua/pic01.jpg",
@@ -737,8 +719,7 @@
             "yua/pic03.jpg"
           ],
           "group": "スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "renya",
@@ -789,8 +770,7 @@
             "saku/pic03.jpg"
           ],
           "group": "スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "sora02",
@@ -802,8 +782,7 @@
             "sora02/pic02.jpg"
           ],
           "group": "スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "raichiui01",
@@ -816,8 +795,7 @@
             "raichiui01/pic03.jpg"
           ],
           "group": "スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "pochi",
@@ -882,8 +860,7 @@
             "ren/pic03.jpg"
           ],
           "group": "スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "leizi",
@@ -895,8 +872,7 @@
             "leizi/pic02.jpg"
           ],
           "group": "スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "haruki",
@@ -1059,8 +1035,7 @@
             "kuromu01/pic03.jpg"
           ],
           "group": "スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "reo02",
@@ -1111,8 +1086,7 @@
             "nagisa/pic03.jpg"
           ],
           "group": "スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "reiya02",
@@ -1243,8 +1217,7 @@
           "reading": "るかわ るか",
           "photos": [],
           "group": "スタッフ",
-          "has_photo": false,
-          "reading_check": true
+          "has_photo": false
         },
         {
           "id": "ryo02",
@@ -1298,15 +1271,14 @@
         {
           "id": "raichi",
           "name": "麗霰らいち",
-          "reading": "らいち",
+          "reading": "らいぜん らいち",
           "photos": [
             "raichi/pr01.jpg",
             "raichi/pic01.jpg",
             "raichi/pic02.jpg"
           ],
           "group": "スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "riku02",
@@ -1352,17 +1324,15 @@
             "kai01/pic01.jpg"
           ],
           "group": "スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "haruto",
           "name": "天使ハルト",
-          "reading": "てんし はると",
+          "reading": "あまつか はると",
           "photos": [],
           "group": "スタッフ",
-          "has_photo": false,
-          "reading_check": true
+          "has_photo": false
         },
         {
           "id": "haku01",
@@ -1382,8 +1352,7 @@
           "reading": "くうが",
           "photos": [],
           "group": "スタッフ",
-          "has_photo": false,
-          "reading_check": true
+          "has_photo": false
         },
         {
           "id": "haruhiamamiya",
@@ -1420,8 +1389,7 @@
             "gaku01/pic01.jpg"
           ],
           "group": "スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "shizuku01",
@@ -1458,8 +1426,7 @@
             "mugi01/pic03.jpg"
           ],
           "group": "スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "hinata01",
@@ -1511,8 +1478,7 @@
             "tatsuki/pic03.jpg"
           ],
           "group": "運営スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "uno",
@@ -1697,8 +1663,7 @@
             "rei3/pic03.jpg"
           ],
           "group": "運営スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "yusei2",
@@ -1809,8 +1774,7 @@
             "kazuki03/pic03.jpg"
           ],
           "group": "運営スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "hakura",
@@ -1859,15 +1823,14 @@
         {
           "id": "o",
           "name": "帝 王(地味にジミン)",
-          "reading": "ていおう",
+          "reading": "みかど おう",
           "photos": [
             "o/pr01.jpg",
             "o/pic01.jpg",
             "o/pic02.jpg"
           ],
           "group": "ランキング",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "riku",
@@ -1880,8 +1843,7 @@
             "riku/pic03.jpg"
           ],
           "group": "ランキング",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "yushi",
@@ -1894,8 +1856,7 @@
             "yushi/pic03.jpg"
           ],
           "group": "ランキング",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "makoto",
@@ -1946,8 +1907,7 @@
             "minato01/pic02.jpg"
           ],
           "group": "ランキング",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "masa",
@@ -1972,8 +1932,7 @@
             "sho/pic03.jpg"
           ],
           "group": "ランキング",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "amatsukaren",
@@ -1985,8 +1944,7 @@
             "amatsukaren/pic03.jpg"
           ],
           "group": "ランキング",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "tori01",
@@ -1998,8 +1956,7 @@
             "tori01/pic02.jpg"
           ],
           "group": "ランキング",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "yuki",
@@ -2048,8 +2005,7 @@
             "yuga/pic02.jpg"
           ],
           "group": "ランキング",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "rui",
@@ -2141,15 +2097,14 @@
         {
           "id": "raku",
           "name": "極 楽",
-          "reading": "ごくらく",
+          "reading": "きわみ らく",
           "photos": [
             "raku/pr01.jpg",
             "raku/pic01.jpg",
             "raku/pic02.jpg"
           ],
           "group": "ランキング",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "nagi",
@@ -2197,8 +2152,7 @@
             "kohaku/pic03.jpg"
           ],
           "group": "ランキング",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "ace",
@@ -2224,8 +2178,7 @@
             "ryuji/pic03.jpg"
           ],
           "group": "ランキング",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "takeru",
@@ -2250,8 +2203,7 @@
             "shu01/pic03.jpg"
           ],
           "group": "スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "ibuki",
@@ -2346,8 +2298,7 @@
             "kaguya/pic01.jpg"
           ],
           "group": "スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "oka",
@@ -2360,8 +2311,7 @@
             "oka/pic03.jpg"
           ],
           "group": "スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "tsubaki02",
@@ -2374,8 +2324,7 @@
             "tsubaki02/pic03.jpg"
           ],
           "group": "スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "rinne",
@@ -2440,8 +2389,7 @@
             "nanato/pic03.jpg"
           ],
           "group": "スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "kanone",
@@ -2554,7 +2502,7 @@
         {
           "id": "ichi",
           "name": "一一",
-          "reading": "いち",
+          "reading": "にのまえ いち",
           "photos": [
             "ichi/pr01.jpg",
             "ichi/pic01.jpg",
@@ -2562,8 +2510,7 @@
             "ichi/pic03.jpg"
           ],
           "group": "スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "shoking",
@@ -2621,8 +2568,7 @@
             "sei01/pic03.jpg"
           ],
           "group": "スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "hayato",
@@ -2661,8 +2607,7 @@
             "tatsuki/pic03.jpg"
           ],
           "group": "運営スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "kaede",
@@ -2691,15 +2636,14 @@
         {
           "id": "shun01",
           "name": "月城 旬",
-          "reading": "つきしろ しゅん",
+          "reading": "える",
           "photos": [
             "shun01/pr01.jpg",
             "shun01/pic01.jpg",
             "shun01/pic02.jpg"
           ],
           "group": "運営スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "taiga",
@@ -2767,8 +2711,7 @@
             "yu01/pic01.jpg"
           ],
           "group": "運営スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "yugo",
@@ -2789,8 +2732,7 @@
             "tori/pic03.jpg"
           ],
           "group": "運営スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "shohei",
@@ -2816,8 +2758,7 @@
             "kazuki/pic03.jpg"
           ],
           "group": "運営スタッフ",
-          "has_photo": true,
-          "reading_check": true
+          "has_photo": true
         },
         {
           "id": "hakura",
