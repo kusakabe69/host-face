@@ -7,6 +7,8 @@
 // ====== 定数 ======
 const CHOICE_COUNT = 6;            // 名前候補の数（正解1＋ダミー5）
 const MASTER_STREAK = 2;           // 連続正解この数で「覚えた」扱い
+const RANK_GROUP = 'ランキング';   // 優先的に出題する区分
+const RANK_PRIORITY = 2;           // ランキングの人の出題されやすさ倍率（未習得時）
 const LS_LAST_STORE = 'hostface_lastStore';
 const LS_PROGRESS = (sid) => `hostface_progress_${sid}`;
 
@@ -115,19 +117,31 @@ function isMastered(id) {
 }
 
 // ====== 出題ロジック（苦手・未出題を重点的に） ======
+// 区分による出題優先度。ランキングの人を他区分より出やすくする。
+// ただし習得済みなら同等（1倍）＝覚えた人は優先しない。
+function groupPriority(staff) {
+  if (isMastered(staff.id)) return 1;
+  return staff.group === RANK_GROUP ? RANK_PRIORITY : 1;
+}
+
 function weightOf(staff) {
   const s = progress.stats[staff.id];
-  if (!s || s.seen === 0) return 6;             // 未出題（通常は別枠で処理）
-  // ベースを高めにして、苦手補正は控えめ＝「同じ苦手な人ばかり」を防ぎつつ
-  // それでも間違えた人がやや出やすい、くらいの軽い重み付けにする。
-  let w = 2;
-  w += s.wrong * 1.2;                           // 間違えた回数（マイルド）
-  const sinceWrong = progress.qCount - s.lastWrongAt;
-  if (s.wrong > 0 && sinceWrong < 12) {         // 最近間違えた人を少しだけ
-    w += 2 * (1 - sinceWrong / 12);
+  let w;
+  if (!s || s.seen === 0) {
+    w = 6;                                      // 未出題
+  } else {
+    // ベースを高めにして、苦手補正は控えめ＝「同じ苦手な人ばかり」を防ぎつつ
+    // それでも間違えた人がやや出やすい、くらいの軽い重み付けにする。
+    w = 2;
+    w += s.wrong * 1.2;                         // 間違えた回数（マイルド）
+    const sinceWrong = progress.qCount - s.lastWrongAt;
+    if (s.wrong > 0 && sinceWrong < 12) {       // 最近間違えた人を少しだけ
+      w += 2 * (1 - sinceWrong / 12);
+    }
+    if (s.streak === 1) w *= 0.7;               // あと1回で覚えた、はやや控えめ
+    w = Math.max(w, 0.3);
   }
-  if (s.streak === 1) w *= 0.7;                 // あと1回で覚えた、はやや控えめ
-  return Math.max(w, 0.3);
+  return w * groupPriority(staff);              // ランキングを優先（習得済みは同等）
 }
 
 function pickWeighted(candidates) {
@@ -169,7 +183,7 @@ function nextQuestion() {
   if (review.length && (unseen.length === 0 || Math.random() < REVIEW_RATIO)) {
     target = pickWeighted(review);                              // 苦手・既出を重点的に
   } else if (unseen.length) {
-    target = unseen[Math.floor(Math.random() * unseen.length)]; // 新顔を1人
+    target = pickWeighted(unseen);                              // 新顔を1人（ランキング優先）
   } else {
     target = pickWeighted(candidates);                          // 全員覚えた後は全体から
   }
